@@ -1,0 +1,14 @@
+Z:\Work\SoftServe_Academy\ElementaryTasks\NumberSequenceApp\bin\Debug\netcoreapp3.1\NumberSequenceApp.exe
+Z:\Work\SoftServe_Academy\ElementaryTasks\NumberSequenceApp\bin\Debug\netcoreapp3.1\NumberSequenceApp.deps.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\NumberSequenceApp\bin\Debug\netcoreapp3.1\NumberSequenceApp.runtimeconfig.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\NumberSequenceApp\bin\Debug\netcoreapp3.1\NumberSequenceApp.runtimeconfig.dev.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\NumberSequenceApp\bin\Debug\netcoreapp3.1\NumberSequenceApp.dll
+Z:\Work\SoftServe_Academy\ElementaryTasks\NumberSequenceApp\bin\Debug\netcoreapp3.1\NumberSequenceApp.pdb
+Z:\Work\SoftServe_Academy\ElementaryTasks\NumberSequenceApp\obj\Debug\netcoreapp3.1\NumberSequenceApp.csproj.AssemblyReference.cache
+Z:\Work\SoftServe_Academy\ElementaryTasks\NumberSequenceApp\obj\Debug\netcoreapp3.1\NumberSequenceApp.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Work\SoftServe_Academy\ElementaryTasks\NumberSequenceApp\obj\Debug\netcoreapp3.1\NumberSequenceApp.AssemblyInfoInputs.cache
+Z:\Work\SoftServe_Academy\ElementaryTasks\NumberSequenceApp\obj\Debug\netcoreapp3.1\NumberSequenceApp.AssemblyInfo.cs
+Z:\Work\SoftServe_Academy\ElementaryTasks\NumberSequenceApp\obj\Debug\netcoreapp3.1\NumberSequenceApp.csproj.CoreCompileInputs.cache
+Z:\Work\SoftServe_Academy\ElementaryTasks\NumberSequenceApp\obj\Debug\netcoreapp3.1\NumberSequenceApp.dll
+Z:\Work\SoftServe_Academy\ElementaryTasks\NumberSequenceApp\obj\Debug\netcoreapp3.1\NumberSequenceApp.pdb
+Z:\Work\SoftServe_Academy\ElementaryTasks\NumberSequenceApp\obj\Debug\netcoreapp3.1\NumberSequenceApp.genruntimeconfig.cache

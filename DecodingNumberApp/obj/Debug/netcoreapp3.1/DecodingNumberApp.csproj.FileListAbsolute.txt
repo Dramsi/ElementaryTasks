@@ -1,0 +1,14 @@
+Z:\Work\SoftServe_Academy\ElementaryTasks\DecodingNumberApp\bin\Debug\netcoreapp3.1\DecodingNumberApp.exe
+Z:\Work\SoftServe_Academy\ElementaryTasks\DecodingNumberApp\bin\Debug\netcoreapp3.1\DecodingNumberApp.deps.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\DecodingNumberApp\bin\Debug\netcoreapp3.1\DecodingNumberApp.runtimeconfig.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\DecodingNumberApp\bin\Debug\netcoreapp3.1\DecodingNumberApp.runtimeconfig.dev.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\DecodingNumberApp\bin\Debug\netcoreapp3.1\DecodingNumberApp.dll
+Z:\Work\SoftServe_Academy\ElementaryTasks\DecodingNumberApp\bin\Debug\netcoreapp3.1\DecodingNumberApp.pdb
+Z:\Work\SoftServe_Academy\ElementaryTasks\DecodingNumberApp\obj\Debug\netcoreapp3.1\DecodingNumberApp.csproj.AssemblyReference.cache
+Z:\Work\SoftServe_Academy\ElementaryTasks\DecodingNumberApp\obj\Debug\netcoreapp3.1\DecodingNumberApp.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Work\SoftServe_Academy\ElementaryTasks\DecodingNumberApp\obj\Debug\netcoreapp3.1\DecodingNumberApp.AssemblyInfoInputs.cache
+Z:\Work\SoftServe_Academy\ElementaryTasks\DecodingNumberApp\obj\Debug\netcoreapp3.1\DecodingNumberApp.AssemblyInfo.cs
+Z:\Work\SoftServe_Academy\ElementaryTasks\DecodingNumberApp\obj\Debug\netcoreapp3.1\DecodingNumberApp.csproj.CoreCompileInputs.cache
+Z:\Work\SoftServe_Academy\ElementaryTasks\DecodingNumberApp\obj\Debug\netcoreapp3.1\DecodingNumberApp.dll
+Z:\Work\SoftServe_Academy\ElementaryTasks\DecodingNumberApp\obj\Debug\netcoreapp3.1\DecodingNumberApp.pdb
+Z:\Work\SoftServe_Academy\ElementaryTasks\DecodingNumberApp\obj\Debug\netcoreapp3.1\DecodingNumberApp.genruntimeconfig.cache

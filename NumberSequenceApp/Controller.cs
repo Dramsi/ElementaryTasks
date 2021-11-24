@@ -6,8 +6,8 @@ namespace NumberSequenceApp
     {
         public int[] Calculations(NumberSequence numberSequence)
         {
-            int minNumber = Convert.ToInt32(Math.Ceiling(Math.Sqrt(numberSequence.squareNumber)));
-            int[] numbers = new int[numberSequence.lengthArray];
+            int minNumber = Convert.ToInt32(Math.Ceiling(Math.Sqrt(numberSequence.SquareNumber)));
+            int[] numbers = new int[numberSequence.LengthArray];
             for (int i = 0; i <= numbers.Length - 1; i++)
             {
                 numbers[i] = Convert.ToInt32(minNumber++);
@@ -29,16 +29,8 @@ namespace NumberSequenceApp
             View view = new View();
             do
             {
-                try
-                {
-                    Console.WriteLine(view.GetResults());
-                    check = view.RetryMessage();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                    check = view.RetryMessage();
-                }
+                Console.WriteLine(view.GetResults());
+                check = view.RetryMessage();
             } while (check);
             Console.WriteLine("\nPress any key to close the program.");
             Console.ReadLine();

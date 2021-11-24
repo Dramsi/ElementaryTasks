@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using NumberSequenceApp;
+using System;
 
 namespace NumberSequenceApp.Tests
 {
@@ -18,9 +19,9 @@ namespace NumberSequenceApp.Tests
 
         [Test]
         [Category("Controller")]
-        [TestCase(5, 6, new int[] { 2, 3, 4, 5, 6 })]
-        [TestCase(8, 10, new int[] { 3, 4, 5, 6, 7, 8, 9, 10 })]
-        [TestCase(3, 20, new int[] { 4, 5, 6})]
+        [TestCase(5, 6, new int[] { 3, 4, 5, 6, 7 })]
+        [TestCase(8, 10, new int[] { 4, 5, 6, 7, 8, 9, 10, 11 })]
+        [TestCase(3, 20, new int[] { 5, 6, 7})]
         public void Calculations_Test_Positive(int n, int m, int[] expected)
         {
             // Arrange
@@ -52,7 +53,7 @@ namespace NumberSequenceApp.Tests
 
         [Test]
         [Category("Controller")]
-        [Ignore("Тест пока ничего не содержит")]
+        [Ignore("The test doesn't work")]
         public void Run_Test_Negative()
         {
             // Arrange
@@ -62,28 +63,14 @@ namespace NumberSequenceApp.Tests
 
 
             // Assert
-            //Assert.Throws
-        }
-
-        [Test]
-        [Category("View")]
-        [Ignore("Тест пока ничего не содержит")]
-        public void SetArg_Test_Negative()
-        {
-            // Arrange
-
-
-            // Act
-
-
-            // Assert
-
+            Assert.Throws<Exception>(() => view.GetResults());
         }
 
         [TearDown]
         public void TearDown()
         {
             controller = null;
+            view = null;
         }
     }
 }

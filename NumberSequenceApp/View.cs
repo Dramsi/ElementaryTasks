@@ -4,13 +4,13 @@ namespace NumberSequenceApp
 {
     public class View
     {
-        public NumberSequence SetArg()
+        private NumberSequence SetArg()
         {
             int lengthArray = SetLengthArray();
             double squareNumber = SetSquareNumber();
             return new NumberSequence(lengthArray, squareNumber);
         }
-        public int SetLengthArray()
+        private int SetLengthArray()
         {
             int lengthArray;
             bool check;
@@ -20,7 +20,7 @@ namespace NumberSequenceApp
                 lengthArray = Convert.ToInt32(Console.ReadLine());
                 if (lengthArray <= 0 || lengthArray > 10000)
                 {
-                    Console.WriteLine("The value must be no less than 1 and no more than 10000.\nTry again, please.");
+                    Console.WriteLine("The value must be no less than 1 and no more than 10000.");
                     check = RetryMessage();
                 }
                 else
@@ -28,7 +28,7 @@ namespace NumberSequenceApp
             } while (check);
             return lengthArray;
         }
-        public double SetSquareNumber()
+        private double SetSquareNumber()
         {
             double squareNumber;
             bool check;
@@ -38,7 +38,7 @@ namespace NumberSequenceApp
                 squareNumber = Convert.ToDouble(Console.ReadLine());
                 if (squareNumber < 0)
                 {
-                    Console.WriteLine("The value must be no less than 0.\nTry again, please.");
+                    Console.WriteLine("The value must be no less than 0.");
                     check = RetryMessage();
                 }
                 else
@@ -49,9 +49,24 @@ namespace NumberSequenceApp
         public string GetResults()
         {
             Controller controller = new Controller();
-            return controller.ConversionToString(controller.Calculations(SetArg()));
+            bool check = true;
+            string result;
+            do
+            {
+                try
+                {
+                    result = controller.ConversionToString(controller.Calculations(SetArg()));
+                    return result;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    check = RetryMessage();
+                }
+            } while (check);
+            return null;
         }
-        public bool RetryMessage()
+        internal bool RetryMessage()
         {
             bool check;
             Console.WriteLine("If you want to repeat, enter «Y» or «y».");

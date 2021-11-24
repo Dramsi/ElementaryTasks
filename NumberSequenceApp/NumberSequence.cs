@@ -2,11 +2,21 @@
 {
     public class NumberSequence
     {
-        public int lengthArray; // n
-        public double squareNumber; //m
-        public NumberSequence() 
-        { 
-
+        private int lengthArray ;       // n
+        private double squareNumber;    // m
+        internal int LengthArray
+        {
+            get
+            {
+                return lengthArray;
+            }
+        }
+        internal double SquareNumber
+        {
+            get
+            {
+                return squareNumber;
+            }
         }
         public NumberSequence(int lengthArray, double squareNumber)
         {

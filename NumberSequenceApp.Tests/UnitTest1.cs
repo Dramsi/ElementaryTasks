@@ -36,16 +36,16 @@ namespace NumberSequenceApp.Tests
 
         [Test]
         [Category("Controller")]
-        [TestCase(new int[] { 2, 3, 4, 5, 6 }, "Results: 2 3 4 5 6 ")]
-        [TestCase(new int[] { 3, 4, 5, 6, 7, 8, 9, 10 }, "Results: 3 4 5 6 7 8 9 10 ")]
-        [TestCase(new int[] { 4, 5, 6 }, "Results: 4 5 6 ")]
-        public void ConversionToString_Test_Positive(int[] numbers, string expected)
+        [TestCase(new int[] { 2, 3, 4, 5, 6 }, "Results: 2 3 4 5 6")]
+        [TestCase(new int[] { 3, 4, 5, 6, 7, 8, 9, 10 }, "Results: 3 4 5 6 7 8 9 10")]
+        [TestCase(new int[] { 4, 5, 6 }, "Results: 4 5 6")]
+        public void TranslationToString_Test_Positive(int[] numbers, string expected)
         {
             // Arrange
 
 
             // Act
-            string actual = controller.ConversionToString(numbers);
+            string actual = controller.TranslationToString(numbers);
 
             // Assert
             Assert.AreEqual(expected, actual);

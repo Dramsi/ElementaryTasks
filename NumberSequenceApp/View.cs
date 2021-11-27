@@ -55,12 +55,17 @@ namespace NumberSequenceApp
             {
                 try
                 {
-                    result = controller.ConversionToString(controller.Calculations(SetArg()));
+                    result = controller.TranslationToString(controller.Calculations(SetArg()));
                     return result;
                 }
-                catch (Exception e)
+                catch (OverflowException)
                 {
-                    Console.WriteLine(e.Message);
+                    Console.WriteLine("Value was either too large.");
+                    check = RetryMessage();
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Input string was not in a correct format.");
                     check = RetryMessage();
                 }
             } while (check);
@@ -71,7 +76,7 @@ namespace NumberSequenceApp
             bool check;
             Console.WriteLine("If you want to repeat, enter «Y» or «y».");
             string answer = Console.ReadLine();
-            if (answer == "Y" || answer == "y")
+            if (String.Equals(answer, "y", StringComparison.OrdinalIgnoreCase))
                 check = true;
             else
                 check = false;

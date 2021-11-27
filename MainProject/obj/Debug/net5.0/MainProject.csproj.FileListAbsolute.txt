@@ -1,0 +1,16 @@
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\MainProject.exe
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\MainProject.deps.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\MainProject.runtimeconfig.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\MainProject.runtimeconfig.dev.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\MainProject.dll
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\ref\MainProject.dll
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\MainProject.pdb
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\obj\Debug\net5.0\MainProject.csproj.AssemblyReference.cache
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\obj\Debug\net5.0\MainProject.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\obj\Debug\net5.0\MainProject.AssemblyInfoInputs.cache
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\obj\Debug\net5.0\MainProject.AssemblyInfo.cs
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\obj\Debug\net5.0\MainProject.csproj.CoreCompileInputs.cache
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\obj\Debug\net5.0\MainProject.dll
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\obj\Debug\net5.0\ref\MainProject.dll
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\obj\Debug\net5.0\MainProject.pdb
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\obj\Debug\net5.0\MainProject.genruntimeconfig.cache

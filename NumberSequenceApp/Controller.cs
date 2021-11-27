@@ -14,14 +14,9 @@ namespace NumberSequenceApp
             }
             return numbers;
         }
-        public string ConversionToString(int[] numbers)
+        public string TranslationToString(int[] numbers)
         {
-            string resultString = "Results: ";
-            foreach (int i in numbers)
-            {
-                resultString += i + " ";
-            }
-            return resultString;
+            return "Results: " + String.Join(" ", numbers);
         }
         public void Run()
         {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DecodingNumberApp
 {
-    class Controller
+    public class Controller
     {
         public void Run()
         {

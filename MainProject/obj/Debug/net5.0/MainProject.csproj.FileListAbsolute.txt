@@ -14,3 +14,16 @@ Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\obj\Debug\net5.0\MainProje
 Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\obj\Debug\net5.0\ref\MainProject.dll
 Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\obj\Debug\net5.0\MainProject.pdb
 Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\obj\Debug\net5.0\MainProject.genruntimeconfig.cache
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\DecodingNumberApp.deps.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\DecodingNumberApp.runtimeconfig.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\DecodingNumberApp.runtimeconfig.dev.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\DecodingNumberApp.exe
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\NumberSequenceApp.deps.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\NumberSequenceApp.runtimeconfig.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\NumberSequenceApp.runtimeconfig.dev.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\NumberSequenceApp.exe
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\DecodingNumberApp.dll
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\NumberSequenceApp.dll
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\DecodingNumberApp.pdb
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\NumberSequenceApp.pdb
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\obj\Debug\net5.0\MainProject.csproj.CopyComplete

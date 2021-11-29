@@ -7,14 +7,38 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "MainProject/1.0.0": {
+        "dependencies": {
+          "DecodingNumberApp": "1.0.0",
+          "NumberSequenceApp": "1.0.0"
+        },
         "runtime": {
           "MainProject.dll": {}
+        }
+      },
+      "DecodingNumberApp/1.0.0": {
+        "runtime": {
+          "DecodingNumberApp.dll": {}
+        }
+      },
+      "NumberSequenceApp/1.0.0": {
+        "runtime": {
+          "NumberSequenceApp.dll": {}
         }
       }
     }
   },
   "libraries": {
     "MainProject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DecodingNumberApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NumberSequenceApp/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -35,7 +35,6 @@ namespace MainProject
                     Console.WriteLine("\nPress Esc to close the program.");
                     break;
             }
-
         }
         public void ViewProgramm(int state)
         {
@@ -45,16 +44,20 @@ namespace MainProject
                 case 1:
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("You selected (Number to write).");
+                    Console.WriteLine("You selected (Number to write).\n");
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("\nPress Backspace to return to the menu.");
+                    new DecodingNumberApp.Controller().Run();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Press Backspace to return to the menu.\n");
                     break;
                 case 2:
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine("You selected (Numerical sequence).");
+                    Console.WriteLine("You selected (Numerical sequence).\n");
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("\nPress Backspace to return to the menu.");
+                    new NumberSequenceApp.Controller().Run();
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine("Press Backspace to return to the menu.\n");
                     break;
             }
         }

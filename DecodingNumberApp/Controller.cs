@@ -66,6 +66,9 @@ namespace DecodingNumberApp
         {
             return Convert.ToString(number).Length;
         }
-
+        public int GetLastNumber(int numberWithoutRemainder)
+        {
+            return Convert.ToInt32(Convert.ToString(numberWithoutRemainder)[Convert.ToString(numberWithoutRemainder).Length - 1] + " ");
+        }
     }
 }

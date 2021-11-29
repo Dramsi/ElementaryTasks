@@ -67,11 +67,20 @@ namespace DecodingNumberApp
             { 2, " тысячи " },
             { 3, " тысяч " }
         };
+        public Dictionary<int, string> thousandNamber = new Dictionary<int, string>()
+        {
+            { 1, "одна" },
+            { 2, "две" }
+        };
         public Dictionary<int, string> millionName = new Dictionary<int, string>()
         {
             { 1, " миллион " },
             { 2, " миллиона " },
             { 3, " миллионов " }
+        };
+        public Dictionary<int, string> millionNamber = new Dictionary<int, string>()
+        {
+            { 1, "один" }
         };
         public Dictionary<int, string> billionName = new Dictionary<int, string>()
         {

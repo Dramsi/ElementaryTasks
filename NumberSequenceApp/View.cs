@@ -71,7 +71,7 @@ namespace NumberSequenceApp
             } while (check);
             return null;
         }
-        internal bool RetryMessage()
+        public bool RetryMessage()
         {
             bool check;
             Console.WriteLine("If you want to repeat, enter «Y» or «y».");

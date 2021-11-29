@@ -4,14 +4,14 @@
     {
         private int lengthArray ;       // n
         private double squareNumber;    // m
-        internal int LengthArray
+        public int LengthArray
         {
             get
             {
                 return lengthArray;
             }
         }
-        internal double SquareNumber
+        public double SquareNumber
         {
             get
             {

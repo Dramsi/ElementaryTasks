@@ -12,17 +12,32 @@ namespace DecodingNumberApp
             bool check;
             do
             {
-                Console.WriteLine("Enter the number:");
-                number = Convert.ToInt32(Console.ReadLine());
-                if (number <= 0 || number > 999)
+                try
                 {
-                    Console.WriteLine("The value must be no less than 1 and no more than 10000.");
+                    Console.WriteLine("Enter the number:");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    if (number < 0 || number > 2147483647)
+                    {
+                        Console.WriteLine("The value must be no less than 0 and no more than 2147483647.");
+                        check = RetryMessage();
+                    }
+                    else
+                    {
+                        check = false;
+                        return number;
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
                     check = RetryMessage();
                 }
-                else
-                    check = false;
             } while (check);
-            return number;
+            return -1;
+        }
+        public void GetStringNumber(string number)
+        {
+            Console.WriteLine(number);
         }
         public bool RetryMessage()
         {

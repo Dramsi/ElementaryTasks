@@ -12,7 +12,9 @@ namespace DecodingNumberApp
             do
             {
                 View view = new View();
-                view.GetStringNumber(ConvertNumber(view.SetLongNumber()));
+                object ob = view.SetLongNumber();
+                if (ob != null)
+                    view.GetStringNumber(ConvertNumber((ulong)ob));
                 check = view.RetryMessage();
             } while (check);
             Console.WriteLine("\nPress any key to close the program.");

@@ -6,9 +6,9 @@ namespace DecodingNumberApp
 {
     class View
     {
-        public ulong SetLongNumber()
+        public ulong? SetLongNumber()
         {
-            ulong number;
+            ulong? number;
             bool check;
             do
             {
@@ -24,7 +24,7 @@ namespace DecodingNumberApp
                     else
                     {
                         check = false;
-                        return number;
+                        return (ulong)number;
                     }
                 }
                 catch (Exception e)
@@ -33,7 +33,7 @@ namespace DecodingNumberApp
                     check = RetryMessage();
                 }
             } while (check);
-            return 0;
+            return null;
         }
         public void GetStringNumber(string number)
         {

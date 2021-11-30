@@ -18,7 +18,7 @@ namespace DecodingNumberApp
             Console.WriteLine("\nPress any key to close the program.");
             Console.ReadLine();
         }
-        public string ConvertNumber(ulong number)
+        private string ConvertNumber(ulong number)
         {
             if (number >= 0 && number <= 19)
                 return new TranslationDictionary().numberDictionary[number];
@@ -42,7 +42,7 @@ namespace DecodingNumberApp
             }
             return null;
         }
-        public string GetNumericName(ulong number, ulong numberWithoutRemainder)
+        private string GetNumericName(ulong number, ulong numberWithoutRemainder)
         {
             if (GetLengthNumber(number) >= 4 && GetLengthNumber(number) <= 6)
                 return GetThousandName(numberWithoutRemainder);
@@ -58,7 +58,7 @@ namespace DecodingNumberApp
                 return GetQuintillionName(numberWithoutRemainder);
             return " _ ";
         }
-        public string GetThousandName(ulong numberWithoutRemainder)
+        private string GetThousandName(ulong numberWithoutRemainder)
         {
             if (GetLastNumber(numberWithoutRemainder) == 1 || GetLastNumber(numberWithoutRemainder) == 2)
             {
@@ -79,7 +79,7 @@ namespace DecodingNumberApp
                 return ConvertNumber(numberWithoutRemainder) + new TranslationDictionary().thousandName[3];
             return " _ ";
         }
-        public string GetMillionName(ulong numberWithoutRemainder)
+        private string GetMillionName(ulong numberWithoutRemainder)
         {
             if (GetLastNumber(numberWithoutRemainder) == 1)
             {
@@ -97,7 +97,7 @@ namespace DecodingNumberApp
                 return ConvertNumber(numberWithoutRemainder) + new TranslationDictionary().millionName[3];
             return " _ ";
         }
-        public string GetBillionName(ulong numberWithoutRemainder)
+        private string GetBillionName(ulong numberWithoutRemainder)
         {
             if (GetLastNumber(numberWithoutRemainder) == 1)
             {
@@ -115,7 +115,7 @@ namespace DecodingNumberApp
                 return ConvertNumber(numberWithoutRemainder) + new TranslationDictionary().billionName[3];
             return " _ ";
         }
-        public string GetTrillionName(ulong numberWithoutRemainder)
+        private string GetTrillionName(ulong numberWithoutRemainder)
         {
             if (GetLastNumber(numberWithoutRemainder) == 1)
             {
@@ -133,7 +133,7 @@ namespace DecodingNumberApp
                 return ConvertNumber(numberWithoutRemainder) + new TranslationDictionary().trillionName[3];
             return " _ ";
         }
-        public string GetQuadrillionName(ulong numberWithoutRemainder)
+        private string GetQuadrillionName(ulong numberWithoutRemainder)
         {
             if (GetLastNumber(numberWithoutRemainder) == 1)
             {
@@ -151,7 +151,7 @@ namespace DecodingNumberApp
                 return ConvertNumber(numberWithoutRemainder) + new TranslationDictionary().quadrillionName[3];
             return " _ ";
         }
-        public string GetQuintillionName(ulong numberWithoutRemainder)
+        private string GetQuintillionName(ulong numberWithoutRemainder)
         {
             if (GetLastNumber(numberWithoutRemainder) == 1)
             {
@@ -169,15 +169,15 @@ namespace DecodingNumberApp
                 return ConvertNumber(numberWithoutRemainder) + new TranslationDictionary().quintillionName[3];
             return " _ ";
         }
-        public ulong GetRank(ulong number)
+        private ulong GetRank(ulong number)
         {
             return new TranslationDictionary().numberRank[GetLengthNumber(number)];
         }
-        public int GetLengthNumber(ulong number)
+        private int GetLengthNumber(ulong number)
         {
             return Convert.ToString(number).Length;
         }
-        public ulong GetLastNumber(ulong numberWithoutRemainder)
+        private ulong GetLastNumber(ulong numberWithoutRemainder)
         {
             return Convert.ToUInt64(Convert.ToString(numberWithoutRemainder)[Convert.ToString(numberWithoutRemainder).Length - 1] + " ");
         }

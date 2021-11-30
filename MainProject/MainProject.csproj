@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DecodingNumberApp\DecodingNumberApp.csproj" />
+    <ProjectReference Include="..\LuckyTicketsApp\LuckyTicketsApp.csproj" />
     <ProjectReference Include="..\NumberSequenceApp\NumberSequenceApp.csproj" />
   </ItemGroup>
 

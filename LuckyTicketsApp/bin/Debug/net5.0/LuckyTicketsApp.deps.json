@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "LuckyTicketsApp/1.0.0": {
+        "runtime": {
+          "LuckyTicketsApp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LuckyTicketsApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

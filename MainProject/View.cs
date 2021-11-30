@@ -18,9 +18,9 @@ namespace MainProject
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Press ▲ or ▼ on the keyboard to interact with the menu.\n");
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Number to write");
+                    Console.WriteLine("Number in alphabetical format");
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("Numerical sequence");
+                    Console.WriteLine("Sequence of numbers");
                     Console.WriteLine("\nPress Esc to close the program.");
                     break;
                 case 2:
@@ -28,9 +28,9 @@ namespace MainProject
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Press ▲ or ▼ on the keyboard to interact with the menu.\n");
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine("Number to write");
+                    Console.WriteLine("Number in alphabetical format");
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Numerical sequence");
+                    Console.WriteLine("Sequence of numbers");
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("\nPress Esc to close the program.");
                     break;
@@ -44,7 +44,7 @@ namespace MainProject
                 case 1:
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("You selected (Number to write).\n");
+                    Console.WriteLine("You selected (DecodingNumberApp).\n");
                     Console.ForegroundColor = ConsoleColor.White;
                     new DecodingNumberApp.Controller().Run();
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -53,7 +53,7 @@ namespace MainProject
                 case 2:
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine("You selected (Numerical sequence).\n");
+                    Console.WriteLine("You selected (NumberSequenceApp).\n");
                     Console.ForegroundColor = ConsoleColor.White;
                     new NumberSequenceApp.Controller().Run();
                     Console.ForegroundColor = ConsoleColor.Blue;

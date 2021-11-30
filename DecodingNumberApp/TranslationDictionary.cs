@@ -6,9 +6,8 @@ namespace DecodingNumberApp
 {
     class TranslationDictionary
     {
-        public Dictionary<int, string> numberDictionary = new Dictionary<int, string>()
+        public Dictionary<ulong, string> numberDictionary = new Dictionary<ulong, string>()
         {
-            { -1, "" },
             { 0, "ноль" },
             { 1, "один" },
             { 2, "два" },
@@ -47,7 +46,7 @@ namespace DecodingNumberApp
             { 800, "восемьсот" },
             { 900, "девятьсот" }
         };
-        public Dictionary<int, int> numberRank = new Dictionary<int, int>()
+        public Dictionary<int, ulong> numberRank = new Dictionary<int, ulong>()
         {
             { 2, 10 },
             { 3, 100 },
@@ -57,36 +56,63 @@ namespace DecodingNumberApp
             { 7, 1000000 },
             { 8, 1000000 },
             { 9, 1000000 },
-            { 10, 10000000 },
-            { 11, 10000000 },
-            { 12, 10000000 }
+            { 10, 1000000000 },
+            { 11, 1000000000 },
+            { 12, 1000000000 },
+            { 13, 1000000000000 },
+            { 14, 1000000000000 },
+            { 15, 1000000000000 },
+            { 16, 1000000000000000 },
+            { 17, 1000000000000000 },
+            { 18, 1000000000000000 },
+            { 19, 1000000000000000000 },
+            { 20, 1000000000000000000 },
+            { 21, 1000000000000000000 }
         };
-        public Dictionary<int, string> thousandName = new Dictionary<int, string>()
+        public Dictionary<ulong, string> thousandNamber = new Dictionary<ulong, string>()
+        {
+            { 1, "одна" },
+            { 2, "две" }
+        };
+        public Dictionary<ulong, string> thousandName = new Dictionary<ulong, string>()
         {
             { 1, " тысяча " },
             { 2, " тысячи " },
             { 3, " тысяч " }
         };
-        public Dictionary<int, string> thousandNamber = new Dictionary<int, string>()
+        public Dictionary<ulong, string> millionNamber = new Dictionary<ulong, string>()
         {
-            { 1, "одна" },
-            { 2, "две" }
+            { 1, "один" }
         };
-        public Dictionary<int, string> millionName = new Dictionary<int, string>()
+        public Dictionary<ulong, string> millionName = new Dictionary<ulong, string>()
         {
             { 1, " миллион " },
             { 2, " миллиона " },
             { 3, " миллионов " }
         };
-        public Dictionary<int, string> millionNamber = new Dictionary<int, string>()
-        {
-            { 1, "один" }
-        };
-        public Dictionary<int, string> billionName = new Dictionary<int, string>()
+        public Dictionary<ulong, string> billionName = new Dictionary<ulong, string>()
         {
             { 1, " миллиард " },
             { 2, " миллиарда " },
             { 3, " миллиардов " }
+        };
+        public Dictionary<ulong, string> trillionName = new Dictionary<ulong, string>()
+        {
+            { 1, " биллион " },
+            { 2, " биллиона " },
+            { 3, " биллионов " }
+        };
+        public Dictionary<ulong, string> quadrillionName = new Dictionary<ulong, string>()
+        {
+            { 1, " биллиард " },
+            { 2, " биллиарда " },
+            { 3, " биллиардов " }
+        };
+        public Dictionary<ulong, string> quintillionName = new Dictionary<ulong, string>()
+        {
+            { 1, " триллион " },
+            { 2, " триллиона " },
+            { 3, " триллионов " }
         };
     }
 }

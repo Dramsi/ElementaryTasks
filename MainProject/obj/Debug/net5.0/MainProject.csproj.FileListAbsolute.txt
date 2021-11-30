@@ -26,4 +26,10 @@ Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\DecodingN
 Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\NumberSequenceApp.dll
 Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\DecodingNumberApp.pdb
 Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\NumberSequenceApp.pdb
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\LuckyTicketsApp.deps.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\LuckyTicketsApp.runtimeconfig.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\LuckyTicketsApp.runtimeconfig.dev.json
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\LuckyTicketsApp.exe
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\LuckyTicketsApp.dll
+Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\bin\Debug\net5.0\LuckyTicketsApp.pdb
 Z:\Work\SoftServe_Academy\ElementaryTasks\MainProject\obj\Debug\net5.0\MainProject.csproj.CopyComplete

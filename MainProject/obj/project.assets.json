@@ -12,6 +12,16 @@
           "bin/placeholder/DecodingNumberApp.dll": {}
         }
       },
+      "LuckyTicketsApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/LuckyTicketsApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LuckyTicketsApp.dll": {}
+        }
+      },
       "NumberSequenceApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -30,6 +40,11 @@
       "path": "../DecodingNumberApp/DecodingNumberApp.csproj",
       "msbuildProject": "../DecodingNumberApp/DecodingNumberApp.csproj"
     },
+    "LuckyTicketsApp/1.0.0": {
+      "type": "project",
+      "path": "../LuckyTicketsApp/LuckyTicketsApp.csproj",
+      "msbuildProject": "../LuckyTicketsApp/LuckyTicketsApp.csproj"
+    },
     "NumberSequenceApp/1.0.0": {
       "type": "project",
       "path": "../NumberSequenceApp/NumberSequenceApp.csproj",
@@ -39,6 +54,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "DecodingNumberApp >= 1.0.0",
+      "LuckyTicketsApp >= 1.0.0",
       "NumberSequenceApp >= 1.0.0"
     ]
   },
@@ -79,6 +95,9 @@
           "projectReferences": {
             "Z:\\Work\\SoftServe_Academy\\ElementaryTasks\\DecodingNumberApp\\DecodingNumberApp.csproj": {
               "projectPath": "Z:\\Work\\SoftServe_Academy\\ElementaryTasks\\DecodingNumberApp\\DecodingNumberApp.csproj"
+            },
+            "Z:\\Work\\SoftServe_Academy\\ElementaryTasks\\LuckyTicketsApp\\LuckyTicketsApp.csproj": {
+              "projectPath": "Z:\\Work\\SoftServe_Academy\\ElementaryTasks\\LuckyTicketsApp\\LuckyTicketsApp.csproj"
             },
             "Z:\\Work\\SoftServe_Academy\\ElementaryTasks\\NumberSequenceApp\\NumberSequenceApp.csproj": {
               "projectPath": "Z:\\Work\\SoftServe_Academy\\ElementaryTasks\\NumberSequenceApp\\NumberSequenceApp.csproj"

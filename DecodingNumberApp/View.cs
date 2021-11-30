@@ -6,19 +6,19 @@ namespace DecodingNumberApp
 {
     class View
     {
-        public int SetIntNumber()
+        public ulong SetLongNumber()
         {
-            int number;
+            ulong number;
             bool check;
             do
             {
                 try
                 {
                     Console.WriteLine("Enter the number:");
-                    number = Convert.ToInt32(Console.ReadLine());
-                    if (number < 0 || number > 2147483647)
+                    number = Convert.ToUInt64(Console.ReadLine());
+                    if (number < 0 || number > 18446744073709551615)
                     {
-                        Console.WriteLine("The value must be no less than 0 and no more than 2147483647.");
+                        Console.WriteLine("The value must be no less than 0 and no more than 18446744073709551615.");
                         check = RetryMessage();
                     }
                     else
@@ -33,7 +33,7 @@ namespace DecodingNumberApp
                     check = RetryMessage();
                 }
             } while (check);
-            return -1;
+            return 0;
         }
         public void GetStringNumber(string number)
         {

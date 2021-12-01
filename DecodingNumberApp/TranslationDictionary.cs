@@ -6,7 +6,11 @@ namespace DecodingNumberApp
 {
     class TranslationDictionary
     {
-        public Dictionary<ulong, string> numberDictionary = new Dictionary<ulong, string>()
+        public string format = "000 000 000 000 000 000 000";
+
+        public char[] naturalUnits = new char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
+        public Dictionary<int, string> numberDictionary = new Dictionary<int, string>()
         {
             { 0, "ноль" },
             { 1, "один" },
@@ -46,69 +50,69 @@ namespace DecodingNumberApp
             { 800, "восемьсот" },
             { 900, "девятьсот" }
         };
-        public Dictionary<int, ulong> numberRank = new Dictionary<int, ulong>()
+        public Dictionary<int, int> numberRank = new Dictionary<int, int>()
         {
             { 2, 10 },
-            { 3, 100 },
-            { 4, 1000 },
-            { 5, 1000 },
-            { 6, 1000 },
-            { 7, 1000000 },
-            { 8, 1000000 },
-            { 9, 1000000 },
-            { 10, 1000000000 },
-            { 11, 1000000000 },
-            { 12, 1000000000 },
-            { 13, 1000000000000 },
-            { 14, 1000000000000 },
-            { 15, 1000000000000 },
-            { 16, 1000000000000000 },
-            { 17, 1000000000000000 },
-            { 18, 1000000000000000 },
-            { 19, 1000000000000000000 },
-            { 20, 1000000000000000000 },
-            { 21, 1000000000000000000 }
+            { 3, 100 }
         };
-        public Dictionary<ulong, string> thousandNamber = new Dictionary<ulong, string>()
+        public Dictionary<int, string> valueRank = new Dictionary<int, string>()
+        {
+            { 1, "" },
+            { 2, " тысяч " },
+            { 3, " миллионов " },
+            { 4, " миллиардов " },
+            { 5, " биллионов " },
+            { 6, " биллиардов " },
+            { 7, " триллионов " }
+        };
+
+
+
+
+
+
+        // TODO: убрать неиспользуемые на данный момент
+
+        public Dictionary<int, string> thousandNamber = new Dictionary<int, string>()
         {
             { 1, "одна" },
             { 2, "две" }
         };
-        public Dictionary<ulong, string> thousandName = new Dictionary<ulong, string>()
+        public Dictionary<int, string> thousandName = new Dictionary<int, string>()
         {
             { 1, " тысяча " },
             { 2, " тысячи " },
             { 3, " тысяч " }
         };
-        public Dictionary<ulong, string> millionNamber = new Dictionary<ulong, string>()
+        public Dictionary<int, string> millionNamber = new Dictionary<int, string>()
         {
             { 1, "один" }
         };
-        public Dictionary<ulong, string> millionName = new Dictionary<ulong, string>()
+        public Dictionary<int, string> millionName = new Dictionary<int, string>()
         {
             { 1, " миллион " },
             { 2, " миллиона " },
             { 3, " миллионов " }
         };
-        public Dictionary<ulong, string> billionName = new Dictionary<ulong, string>()
+        public Dictionary<int, string> billionName = new Dictionary<int, string>()
         {
             { 1, " миллиард " },
             { 2, " миллиарда " },
             { 3, " миллиардов " }
         };
-        public Dictionary<ulong, string> trillionName = new Dictionary<ulong, string>()
+        public Dictionary<int, string> trillionName = new Dictionary<int, string>()
         {
             { 1, " биллион " },
             { 2, " биллиона " },
             { 3, " биллионов " }
         };
-        public Dictionary<ulong, string> quadrillionName = new Dictionary<ulong, string>()
+        public Dictionary<int, string> quadrillionName = new Dictionary<int, string>()
         {
             { 1, " биллиард " },
             { 2, " биллиарда " },
             { 3, " биллиардов " }
         };
-        public Dictionary<ulong, string> quintillionName = new Dictionary<ulong, string>()
+        public Dictionary<int, string> quintillionName = new Dictionary<int, string>()
         {
             { 1, " триллион " },
             { 2, " триллиона " },

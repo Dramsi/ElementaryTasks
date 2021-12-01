@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DecodingNumberApp
 {
-    class Controller
+    public class Controller
     {
         public void Run()
         {
@@ -20,7 +20,7 @@ namespace DecodingNumberApp
             Console.WriteLine("\nPress any key to close the program.");
             Console.ReadLine();
         }
-        public string ConvertAllNumbers(ulong number) // TODO: склонение наименований разрядов
+        public string ConvertAllNumbers(ulong number)
         {
             string[] numbersDigits = ConvertNumberToFormat(number);
             string resultOfConvert = null;
@@ -28,11 +28,15 @@ namespace DecodingNumberApp
             {
                 if ((Convert.ToInt32(numbersDigits[indexRank])) != 0)
                     resultOfConvert += ConvertSingleNumbers(Convert.ToInt32(numbersDigits[indexRank])) 
-                        + new TranslationDictionary().valueRank[indexNameRank];
+                        + GetNameRank(indexNameRank);
             }
             if (resultOfConvert == null)
                 resultOfConvert = new TranslationDictionary().numberDictionary[0];
             return resultOfConvert;
+        }
+        public string GetNameRank(int indexNameRank) // TODO: склонение наименований разрядов
+        {
+            return new TranslationDictionary().valueRank[indexNameRank];
         }
         public string[] ConvertNumberToFormat(ulong number)
         {

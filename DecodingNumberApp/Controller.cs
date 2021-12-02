@@ -29,7 +29,7 @@ namespace DecodingNumberApp
                         + GetNameRank(indexNameRank, numbersDigits[indexRank]);
             }
             if (resultOfConvert == null)
-                resultOfConvert = new TranslationDictionary().numberDictionary[0];
+                resultOfConvert = new DictionaryOfRussianNumbers().numberDictionary[0];
             return resultOfConvert;
         }
         public string GetNameRank(int indexNameRank, string numbersDigits) 
@@ -37,24 +37,24 @@ namespace DecodingNumberApp
             int codeRank = indexNameRank * indexNameRank;
             int lastNumber = Convert.ToInt32(char.GetNumericValue(numbersDigits[numbersDigits.Length - 1]));
             if (lastNumber == 1)
-                return new TranslationDictionary().valueRank[codeRank];
+                return new DictionaryOfRussianNumbers().valueRank[codeRank];
             else
             {
                 if (lastNumber >= 2 && lastNumber <= 4)
-                    return new TranslationDictionary().valueRank[codeRank + 1];
+                    return new DictionaryOfRussianNumbers().valueRank[codeRank + 1];
                 else
-                    return new TranslationDictionary().valueRank[codeRank + 2];
+                    return new DictionaryOfRussianNumbers().valueRank[codeRank + 2];
             }
         }
         public string[] ConvertNumberToFormat(ulong number)
         {
-            string numberInFormat = number.ToString(new TranslationDictionary().format);
+            string numberInFormat = number.ToString(new FormatDictionary().format);
             numberInFormat = RemoveZeroValues(numberInFormat);
             return numberInFormat.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
         }
         public string RemoveZeroValues(string numberInFormat)
         {
-            char[] naturalUnits = new TranslationDictionary().naturalUnits;
+            char[] naturalUnits = new FormatDictionary().naturalUnits;
             int indexOfChar = numberInFormat.Length - 1;
             for (int i = 0; i < naturalUnits.Length; i++)
                 if (numberInFormat.IndexOf(naturalUnits[i]) != -1 && numberInFormat.IndexOf(naturalUnits[i]) < indexOfChar)
@@ -72,22 +72,22 @@ namespace DecodingNumberApp
         public string ConvertFrom1To19(int singleNumber, int indexNameRank)
         {
             if (indexNameRank == 2 && (singleNumber == 1 || singleNumber == 2))
-                return new TranslationDictionary().thousandNamber[singleNumber];
+                return new DictionaryOfRussianNumbers().thousandNamber[singleNumber];
             else
-                return new TranslationDictionary().numberDictionary[singleNumber];
+                return new DictionaryOfRussianNumbers().numberDictionary[singleNumber];
         }
         public string ConvertFrom20(int singleNumber, int indexNameRank)
         {
             int remainderOfDivision = singleNumber % GetRank(singleNumber);
             int numberWithoutRemainder = singleNumber - remainderOfDivision;
             if (remainderOfDivision != 0)
-                return new TranslationDictionary().numberDictionary[numberWithoutRemainder] + " " + ConvertSingleNumbers(remainderOfDivision, indexNameRank);
+                return new DictionaryOfRussianNumbers().numberDictionary[numberWithoutRemainder] + " " + ConvertSingleNumbers(remainderOfDivision, indexNameRank);
             else
-                return new TranslationDictionary().numberDictionary[numberWithoutRemainder];
+                return new DictionaryOfRussianNumbers().numberDictionary[numberWithoutRemainder];
         }
         private int GetRank(int singleNumber)
         {
-            return new TranslationDictionary().numberRank[Convert.ToString(singleNumber).Length];
+            return new FormatDictionary().numberRank[Convert.ToString(singleNumber).Length];
         }
     }
 }

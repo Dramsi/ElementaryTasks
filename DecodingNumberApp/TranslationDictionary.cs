@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace DecodingNumberApp
 {
@@ -58,65 +56,31 @@ namespace DecodingNumberApp
         public Dictionary<int, string> valueRank = new Dictionary<int, string>()
         {
             { 1, "" },
-            { 2, " тысяч " },
-            { 3, " миллионов " },
-            { 4, " миллиардов " },
-            { 5, " биллионов " },
-            { 6, " биллиардов " },
-            { 7, " триллионов " }
+            { 2, "" },
+            { 3, "" },
+            { 4, " тысяча " },
+            { 5, " тысячи " },
+            { 6, " тысяч " },
+            { 9, " миллион " },
+            { 10, " миллиона " },
+            { 11, " миллионов " },
+            { 16, " миллиард " },
+            { 17, " миллиарда " },
+            { 18, " миллиардов " },
+            { 25, " биллион " },
+            { 26, " биллиона " },
+            { 27, " биллионов " },
+            { 36, " биллиард " },
+            { 37, " биллиарда " },
+            { 38, " биллиардов " },
+            { 49, " триллион " },
+            { 50, " триллиона " },
+            { 51, " триллионов " }
         };
-
-
-
-
-
-
-        // TODO: убрать неиспользуемые на данный момент
-
         public Dictionary<int, string> thousandNamber = new Dictionary<int, string>()
         {
             { 1, "одна" },
             { 2, "две" }
-        };
-        public Dictionary<int, string> thousandName = new Dictionary<int, string>()
-        {
-            { 1, " тысяча " },
-            { 2, " тысячи " },
-            { 3, " тысяч " }
-        };
-        public Dictionary<int, string> millionNamber = new Dictionary<int, string>()
-        {
-            { 1, "один" }
-        };
-        public Dictionary<int, string> millionName = new Dictionary<int, string>()
-        {
-            { 1, " миллион " },
-            { 2, " миллиона " },
-            { 3, " миллионов " }
-        };
-        public Dictionary<int, string> billionName = new Dictionary<int, string>()
-        {
-            { 1, " миллиард " },
-            { 2, " миллиарда " },
-            { 3, " миллиардов " }
-        };
-        public Dictionary<int, string> trillionName = new Dictionary<int, string>()
-        {
-            { 1, " биллион " },
-            { 2, " биллиона " },
-            { 3, " биллионов " }
-        };
-        public Dictionary<int, string> quadrillionName = new Dictionary<int, string>()
-        {
-            { 1, " биллиард " },
-            { 2, " биллиарда " },
-            { 3, " биллиардов " }
-        };
-        public Dictionary<int, string> quintillionName = new Dictionary<int, string>()
-        {
-            { 1, " триллион " },
-            { 2, " триллиона " },
-            { 3, " триллионов " }
         };
     }
 }

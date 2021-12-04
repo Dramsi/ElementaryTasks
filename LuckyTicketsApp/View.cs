@@ -10,7 +10,7 @@ namespace LuckyTicketsApp
             do
             {
                 LuckyTickets luckyTickets = new LuckyTickets(SetValue("minimum"), SetValue("maximum"));
-                if (verificationEmptyInput(luckyTickets) == null)                                                   //TODO: delete if
+                if (verificationEmptyInput(luckyTickets) == null)                                                   
                     return null;
                 if (luckyTickets.MinTiketValue > luckyTickets.MaxTiketValue)
                 {
@@ -62,9 +62,9 @@ namespace LuckyTicketsApp
                     check = RetryMessage();
                 }
             } while (check);
-            return -1;                                                                                              //TODO: delete -1
+            return -1;                                                                                              
         }
-        private LuckyTickets verificationEmptyInput(LuckyTickets luckyTickets)                                      //TODO: delete if
+        private LuckyTickets verificationEmptyInput(LuckyTickets luckyTickets)                                      
         {
             if (luckyTickets.MinTiketValue == -1)
                 return null;

@@ -8,43 +8,53 @@ namespace MainProject
 {
     class Controller
     {
-        public void Run()
+        Dictionary<int, Action<string[]>> ProgramNumber = new Dictionary<int, Action<string[]>>
         {
-            Console.Title = "ElementaryTasks - Anastasiia";
-            ConsoleKeyInfo key;
-            View view = new View();
-            int state = 1;
-            view.ViewMenu(state);
+            { 1, new Action<string[]>(NumberSequenceApp.Program.Main) },
+            { 2, new Action<string[]>(DecodingNumberApp.Program.Main) },
+            { 3, new Action<string[]>(LuckyTicketsApp.Program.Main) }
+        };
+        public void Run(string[] args)
+        {
+            bool check = false;
             do
             {
-                key = Console.ReadKey(true);
-                if (key.Key == ConsoleKey.DownArrow)
+                new View().ViewMenu();
+                string answer = Console.ReadLine();
+                bool answerIsValid = int.TryParse(answer, out int programNumber);
+                if (!answerIsValid || (programNumber < 1 || programNumber > 3))
                 {
-                    state = 2;
-                    view.ViewMenu(state);
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine("Data entered incorrectly. \nSelect from 1 to 3 or press any key to exit the program.");
+                    check = RetryMessage();
                 }
-                if (key.Key == ConsoleKey.UpArrow)
+                else
                 {
-                    state = 1;
-                    view.ViewMenu(state);
+                    Console.Clear();
+                    ProgramNumber[programNumber].Invoke(args);
+                    Console.Clear();
+                    check = true;
                 }
-                if (key.Key == ConsoleKey.Enter && state == 1)
-                {
-                    view.ViewProgramm(1);
-                }
-                if (key.Key == ConsoleKey.Enter && state == 2)
-                {
-                    view.ViewProgramm(2);
-                }
-                if (key.Key == ConsoleKey.Backspace && state == 1)
-                {
-                    view.ViewMenu(state);
-                }
-                if (key.Key == ConsoleKey.Backspace && state == 2)
-                {
-                    view.ViewMenu(state);
-                }
-            } while (key.Key != ConsoleKey.Escape);
+            }
+            while (check);
+            Console.WriteLine("\nPress any key to close the main program.");
+            Console.ReadLine();
+        }
+        public bool RetryMessage()
+        {
+            bool check;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("If you want to repeat, enter «Y» or «y».");
+            Console.ForegroundColor = ConsoleColor.White;
+            string answer = Console.ReadLine();
+            if (String.Equals(answer, "y", StringComparison.OrdinalIgnoreCase))
+            {
+                check = true;
+                Console.Clear();
+            }
+            else
+                check = false;
+            return check;
         }
     }
 }

@@ -2,9 +2,9 @@
 
 namespace NumberSequenceApp
 {
-    public class Controller
+    class Controller
     {
-        public int[] Calculations(NumberSequence numberSequence)
+        private int[] Calculations(NumberSequence numberSequence)
         {
             int minNumber = Convert.ToInt32(Math.Ceiling(Math.Sqrt(numberSequence.SquareNumber)));
             int[] numbers = new int[numberSequence.LengthArray];
@@ -14,18 +14,33 @@ namespace NumberSequenceApp
             }
             return numbers;
         }
-        public string TranslationToString(int[] numbers)
+        private string TranslationToString(int[] numbers)
         {
             return "Results: " + String.Join(" ", numbers);
         }
         public void Run()
         {
-            bool check = true;
             View view = new View();
+            bool check;
             do
             {
-                Console.WriteLine(view.GetResults());
-                check = view.RetryMessage();
+                try
+                {
+                    view.GetResults(TranslationToString(Calculations(view.SetArg())));
+                    check = view.RetryMessage();
+                }
+                catch (OverflowException)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine("Value was either too large.");
+                    check = view.RetryMessage();
+                }
+                catch (FormatException)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine("Input string was not in a correct format.");
+                    check = view.RetryMessage();
+                }
             } while (check);
             Console.WriteLine("\nPress any key to close the program.");
             Console.ReadLine();

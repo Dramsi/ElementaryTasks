@@ -33,7 +33,7 @@ namespace LuckyTicketsApp
             {
                 try
                 {
-                    Console.ForegroundColor = ConsoleColor.DarkBlue;
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine($"Enter {valueName} ticket value:");
                     Console.ForegroundColor = ConsoleColor.White;
                     int ticketValue = Convert.ToInt32(Console.ReadLine());

@@ -2,7 +2,7 @@
 
 namespace DecodingNumberApp
 {
-    public class Controller
+    class Controller
     {
         public void Run()
         {

@@ -12,7 +12,7 @@ namespace DecodingNumberApp
             {
                 try
                 {
-                    Console.ForegroundColor = ConsoleColor.DarkBlue;
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine("Enter the number:");
                     Console.ForegroundColor = ConsoleColor.White;
                     number = Convert.ToUInt64(Console.ReadLine());

@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace MainProject
+﻿namespace MainProject
 {
     class Program
     {
         static void Main(string[] args)
         {
-            new Controller().Run();
+            new Controller().Run(args);
         }
     }
 }

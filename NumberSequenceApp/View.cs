@@ -4,7 +4,7 @@ namespace NumberSequenceApp
 {
     public class View
     {
-        private NumberSequence SetArg()
+        public NumberSequence SetArg()
         {
             int lengthArray = SetLengthArray();
             double squareNumber = SetSquareNumber();
@@ -16,10 +16,13 @@ namespace NumberSequenceApp
             bool check;
             do
             {
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("Enter the length of the row:");
+                Console.ForegroundColor = ConsoleColor.White;
                 lengthArray = Convert.ToInt32(Console.ReadLine());
                 if (lengthArray <= 0 || lengthArray > 10000)
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("The value must be no less than 1 and no more than 10000.");
                     check = RetryMessage();
                 }
@@ -34,10 +37,13 @@ namespace NumberSequenceApp
             bool check;
             do
             {
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("Enter the value of the minimum square:");
+                Console.ForegroundColor = ConsoleColor.White;
                 squareNumber = Convert.ToDouble(Console.ReadLine());
                 if (squareNumber < 0)
                 {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("The value must be no less than 0.");
                     check = RetryMessage();
                 }
@@ -46,35 +52,18 @@ namespace NumberSequenceApp
             } while (check);
             return squareNumber;
         }
-        public string GetResults()
+        public void GetResults(string results)
         {
-            Controller controller = new Controller();
-            bool check = true;
-            string result;
-            do
-            {
-                try
-                {
-                    result = controller.TranslationToString(controller.Calculations(SetArg()));
-                    return result;
-                }
-                catch (OverflowException)
-                {
-                    Console.WriteLine("Value was either too large.");
-                    check = RetryMessage();
-                }
-                catch (FormatException)
-                {
-                    Console.WriteLine("Input string was not in a correct format.");
-                    check = RetryMessage();
-                }
-            } while (check);
-            return null;
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine(results);
+
         }
         public bool RetryMessage()
         {
             bool check;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("If you want to repeat, enter «Y» or «y».");
+            Console.ForegroundColor = ConsoleColor.White;
             string answer = Console.ReadLine();
             if (String.Equals(answer, "y", StringComparison.OrdinalIgnoreCase))
                 check = true;

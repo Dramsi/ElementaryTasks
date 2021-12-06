@@ -48,15 +48,15 @@ namespace DecodingNumberApp
         }
         public bool RetryMessage()
         {
-            bool check;
+            bool check = false;
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("If you want to repeat, enter «Y» or «y».");
             Console.ForegroundColor = ConsoleColor.White;
             string answer = Console.ReadLine();
             if (String.Equals(answer, "y", StringComparison.OrdinalIgnoreCase))
+            {
                 check = true;
-            else
-                check = false;
+            }
             return check;
         }
     }

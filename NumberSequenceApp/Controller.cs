@@ -26,7 +26,7 @@ namespace NumberSequenceApp
             {
                 try
                 {
-                    view.GetResults(TranslationToString(Calculations(view.SetArg())));
+                    view.GetResults(TranslationToString(Calculations(view.SetInputData())));
                     check = view.RetryMessage();
                 }
                 catch (OverflowException)

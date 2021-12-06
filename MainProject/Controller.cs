@@ -35,14 +35,13 @@ namespace MainProject
                     Console.Clear();
                     check = true;
                 }
-            }
-            while (check);
+            } while (check);
             Console.WriteLine("\nPress any key to close the main program.");
             Console.ReadLine();
         }
         public bool RetryMessage()
         {
-            bool check;
+            bool check = false;
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("If you want to repeat, enter «Y» or «y».");
             Console.ForegroundColor = ConsoleColor.White;
@@ -52,8 +51,6 @@ namespace MainProject
                 check = true;
                 Console.Clear();
             }
-            else
-                check = false;
             return check;
         }
     }

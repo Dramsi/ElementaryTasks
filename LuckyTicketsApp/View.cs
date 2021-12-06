@@ -10,8 +10,10 @@ namespace LuckyTicketsApp
             do
             {
                 LuckyTickets luckyTickets = new LuckyTickets(SetValue("minimum"), SetValue("maximum"));
-                if (verificationEmptyInput(luckyTickets) == null)                                                   
+                if (verificationEmptyInput(luckyTickets) == null)
+                {
                     return null;
+                }
                 if (luckyTickets.MinTiketValue > luckyTickets.MaxTiketValue)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkRed;
@@ -33,6 +35,7 @@ namespace LuckyTicketsApp
             {
                 try
                 {
+                    check = false;
                     Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine($"Enter {valueName} ticket value:");
                     Console.ForegroundColor = ConsoleColor.White;
@@ -43,11 +46,7 @@ namespace LuckyTicketsApp
                         Console.WriteLine("The value must be no less than 0 and no more than 999999.");
                         check = RetryMessage();
                     }
-                    else
-                    {
-                        check = false;
-                        return ticketValue;
-                    }
+                    return ticketValue;
                 }
                 catch (FormatException)
                 {
@@ -66,10 +65,10 @@ namespace LuckyTicketsApp
         }
         private LuckyTickets verificationEmptyInput(LuckyTickets luckyTickets)                                      
         {
-            if (luckyTickets.MinTiketValue == -1)
+            if (luckyTickets.MinTiketValue == -1 || luckyTickets.MaxTiketValue == -1)
+            {
                 return null;
-            if (luckyTickets.MaxTiketValue == -1)
-                return null;
+            }
             return luckyTickets;
         }
         public void GetComparisonResults(int numberOfLuckyTicketsEasyWay, int numberOfLuckyTicketsDifficultWay)
@@ -79,26 +78,32 @@ namespace LuckyTicketsApp
                 $"\nNumber of lucky tickets counted in a difficul way: {numberOfLuckyTicketsDifficultWay}");
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             if (numberOfLuckyTicketsEasyWay > numberOfLuckyTicketsDifficultWay)
+            {
                 Console.WriteLine("The easy way won!");
+            }
             else
             {
                 if (numberOfLuckyTicketsEasyWay < numberOfLuckyTicketsDifficultWay)
+                {
                     Console.WriteLine("The difficult way won!");
+                }
                 else
+                {
                     Console.WriteLine("Both methods are equal!");
+                }
             }
         }
         public bool RetryMessage()
         {
-            bool check;
+            bool check = false;
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("If you want to repeat, enter «Y» or «y».");
             Console.ForegroundColor = ConsoleColor.White;
             string answer = Console.ReadLine();
             if (String.Equals(answer, "y", StringComparison.OrdinalIgnoreCase))
+            {
                 check = true;
-            else
-                check = false;
+            }
             return check;
         }
     }

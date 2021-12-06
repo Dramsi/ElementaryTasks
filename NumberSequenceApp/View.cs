@@ -4,7 +4,7 @@ namespace NumberSequenceApp
 {
     public class View
     {
-        public NumberSequence SetArg()
+        public NumberSequence SetInputData() 
         {
             int lengthArray = SetLengthArray();
             double squareNumber = SetSquareNumber();
@@ -16,6 +16,7 @@ namespace NumberSequenceApp
             bool check;
             do
             {
+                check = false;
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("Enter the length of the row:");
                 Console.ForegroundColor = ConsoleColor.White;
@@ -26,8 +27,6 @@ namespace NumberSequenceApp
                     Console.WriteLine("The value must be no less than 1 and no more than 10000.");
                     check = RetryMessage();
                 }
-                else
-                    check = false;
             } while (check);
             return lengthArray;
         }
@@ -37,6 +36,7 @@ namespace NumberSequenceApp
             bool check;
             do
             {
+                check = false;
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("Enter the value of the minimum square:");
                 Console.ForegroundColor = ConsoleColor.White;
@@ -47,8 +47,6 @@ namespace NumberSequenceApp
                     Console.WriteLine("The value must be no less than 0.");
                     check = RetryMessage();
                 }
-                else
-                    check = false;
             } while (check);
             return squareNumber;
         }
@@ -60,15 +58,15 @@ namespace NumberSequenceApp
         }
         public bool RetryMessage()
         {
-            bool check;
+            bool check = false;
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("If you want to repeat, enter «Y» or «y».");
             Console.ForegroundColor = ConsoleColor.White;
             string answer = Console.ReadLine();
             if (String.Equals(answer, "y", StringComparison.OrdinalIgnoreCase))
+            {
                 check = true;
-            else
-                check = false;
+            }
             return check;
         }
     }

@@ -9,6 +9,7 @@ namespace LuckyTicketsApp
             bool check;
             do
             {
+                check = false;
                 View view = new View();
                 LuckyTickets luckyTickets = view.SetInputData();
                 if (luckyTickets != null)
@@ -16,8 +17,6 @@ namespace LuckyTicketsApp
                     view.GetComparisonResults(CountLuckyTicketsTheEasyWay(luckyTickets), CountLuckyTicketsTheDifficulWay(luckyTickets));
                     check = view.RetryMessage();
                 }
-                else
-                    check = false;
             } while (check);
             Console.WriteLine("\nPress any key to close the program.");
             Console.ReadLine();
@@ -29,7 +28,9 @@ namespace LuckyTicketsApp
             {
                 string ticketInFormat = ticket.ToString(luckyTickets.format);
                 if ((ticketInFormat[0] + ticketInFormat[1] + ticketInFormat[2]) == (ticketInFormat[3] + ticketInFormat[4] + ticketInFormat[5]))
+                {
                     numberLuckyTickets++;
+                }
             }
             return numberLuckyTickets;
         }
@@ -43,12 +44,18 @@ namespace LuckyTicketsApp
                 for (int number = 0; number < ticketInFormat.Length; number++)
                 {
                     if (ticketInFormat[number] % 2 == 0)
+                    {
                         evenDigits += Convert.ToInt32(char.GetNumericValue(ticketInFormat[number]));
+                    }
                     else
+                    {
                         oddDigits += Convert.ToInt32(char.GetNumericValue(ticketInFormat[number]));
+                    }
                 }
                 if (evenDigits == oddDigits)
+                {
                     numberLuckyTickets++;
+                }
             }
             return numberLuckyTickets;
         }

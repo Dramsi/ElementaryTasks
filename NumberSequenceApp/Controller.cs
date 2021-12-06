@@ -2,7 +2,7 @@
 
 namespace NumberSequenceApp
 {
-    class Controller
+    public class Controller
     {
         private int[] Calculations(NumberSequence numberSequence)
         {

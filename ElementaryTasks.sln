@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumberSequenceApp.Tests", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainProject", "MainProject\MainProject.csproj", "{21B856D5-3AB5-45A4-B52E-CBC60B553010}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuckyTicketsApp", "LuckyTicketsApp\LuckyTicketsApp.csproj", "{CA8D4655-D5F4-4BAC-9366-4EA21F4CE2D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuckyTicketsApp", "LuckyTicketsApp\LuckyTicketsApp.csproj", "{CA8D4655-D5F4-4BAC-9366-4EA21F4CE2D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecodingNumberApp.Tests", "DecodingNumberApp.Tests\DecodingNumberApp.Tests.csproj", "{16D878A0-8A96-4AF4-B20C-0479B58F96DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuckyTicketsApp.Tests", "LuckyTicketsApp.Tests\LuckyTicketsApp.Tests.csproj", "{371E47DE-6CF1-44F6-BC89-5D19A78DF427}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{CA8D4655-D5F4-4BAC-9366-4EA21F4CE2D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA8D4655-D5F4-4BAC-9366-4EA21F4CE2D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA8D4655-D5F4-4BAC-9366-4EA21F4CE2D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16D878A0-8A96-4AF4-B20C-0479B58F96DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16D878A0-8A96-4AF4-B20C-0479B58F96DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16D878A0-8A96-4AF4-B20C-0479B58F96DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16D878A0-8A96-4AF4-B20C-0479B58F96DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{371E47DE-6CF1-44F6-BC89-5D19A78DF427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{371E47DE-6CF1-44F6-BC89-5D19A78DF427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{371E47DE-6CF1-44F6-BC89-5D19A78DF427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{371E47DE-6CF1-44F6-BC89-5D19A78DF427}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

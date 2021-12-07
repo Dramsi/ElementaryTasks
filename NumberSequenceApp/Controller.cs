@@ -2,22 +2,10 @@
 
 namespace NumberSequenceApp
 {
-    public class Controller
+    class Controller
     {
-        private int[] Calculations(NumberSequence numberSequence)
-        {
-            int minNumber = Convert.ToInt32(Math.Ceiling(Math.Sqrt(numberSequence.SquareNumber)));
-            int[] numbers = new int[numberSequence.LengthArray];
-            for (int i = 0; i <= numbers.Length - 1; i++)
-            {
-                numbers[i] = Convert.ToInt32(minNumber++);
-            }
-            return numbers;
-        }
-        private string TranslationToString(int[] numbers)
-        {
-            return "Results: " + String.Join(" ", numbers);
-        }
+        
+        
         public void Run()
         {
             View view = new View();
@@ -26,7 +14,9 @@ namespace NumberSequenceApp
             {
                 try
                 {
-                    view.GetResults(TranslationToString(Calculations(view.SetInputData())));
+                    Calculation calculation = new Calculation();
+                    NumberSequence numberSequence = view.SetInputData();
+                    view.GetResults(calculation.TranslationToString(calculation.CalculationSequence(numberSequence)));
                     check = view.RetryMessage();
                 }
                 catch (OverflowException)

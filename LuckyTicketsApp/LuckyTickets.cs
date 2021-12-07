@@ -1,6 +1,6 @@
 ﻿namespace LuckyTicketsApp
 {
-    class LuckyTickets
+    public class LuckyTickets
     {
         public string format = "000000";
         private int minTiketValue;       

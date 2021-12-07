@@ -2,13 +2,35 @@
 
 namespace NumberSequenceApp
 {
-    public class View
+    class View
     {
         public NumberSequence SetInputData() 
         {
-            int lengthArray = SetLengthArray();
-            double squareNumber = SetSquareNumber();
-            return new NumberSequence(lengthArray, squareNumber);
+            bool check;
+            do
+            {
+                try
+                {
+                    check = false;
+                    int lengthArray = SetLengthArray();
+                    double squareNumber = SetSquareNumber();
+                    return new NumberSequence(lengthArray, squareNumber);
+
+                }
+                catch (OverflowException)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine("Value was either too large.");
+                    check = RetryMessage();
+                }
+                catch (FormatException)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine("Input string was not in a correct format.");
+                    check = RetryMessage();
+                }
+            } while (check);
+            return null;
         }
         private int SetLengthArray()
         {

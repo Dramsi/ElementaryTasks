@@ -39,14 +39,17 @@ namespace LuckyTicketsApp
                     Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine($"Enter {valueName} ticket value:");
                     Console.ForegroundColor = ConsoleColor.White;
-                    int ticketValue = Convert.ToInt32(Console.ReadLine());
-                    if (ticketValue < 0 || ticketValue > 999999)
+                    string ticketValue = Console.ReadLine();
+                    if (Convert.ToInt32(ticketValue) < 0 || Convert.ToInt32(ticketValue) > 999999 || ticketValue.Length != 6)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkRed;
-                        Console.WriteLine("The value must be no less than 0 and no more than 999999.");
+                        Console.WriteLine("The value must be no less than 000000 and no more than 999999.");
                         check = RetryMessage();
                     }
-                    return ticketValue;
+                    else
+                    {
+                        return Convert.ToInt32(ticketValue);
+                    }
                 }
                 catch (FormatException)
                 {

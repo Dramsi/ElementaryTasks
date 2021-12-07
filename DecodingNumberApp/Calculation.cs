@@ -26,20 +26,18 @@ namespace DecodingNumberApp
         {
             int codeRank = indexNameRank * indexNameRank;
             int lastNumber = Convert.ToInt32(char.GetNumericValue(numbersDigits[numbersDigits.Length - 1]));
-            if (lastNumber == 1)
+            int penultimate = numbersDigits.Length > 1 ? Convert.ToInt32(char.GetNumericValue(numbersDigits[numbersDigits.Length - 2])) : 0;
+            if (lastNumber == 1 && penultimate != 1)
             {
                 return new DictionaryOfRussianNumbers().valueRank[codeRank];
             }
             else
             {
-                if (lastNumber >= 2 && lastNumber <= 4)
+                if (lastNumber >= 2 && lastNumber <= 4 && penultimate != 1)
                 {
                     return new DictionaryOfRussianNumbers().valueRank[codeRank + 1];
                 }
-                else
-                {
-                    return new DictionaryOfRussianNumbers().valueRank[codeRank + 2];
-                }
+                return new DictionaryOfRussianNumbers().valueRank[codeRank + 2];
             }
         }
         private string[] ConvertNumberToFormat(ulong number)
@@ -64,14 +62,11 @@ namespace DecodingNumberApp
         }
         private string ConvertSingleNumbers(int singleNumber, int indexNameRank)
         {
-            if (singleNumber >= 0 && singleNumber <= 19)
+            if (singleNumber >= 1 && singleNumber <= 19)
             {
                 return ConvertFrom1To19(singleNumber, indexNameRank);
             }
-            else
-            {
-                return ConvertFrom20(singleNumber, indexNameRank);
-            }
+            return ConvertFrom20To999(singleNumber, indexNameRank);
         }
         private string ConvertFrom1To19(int singleNumber, int indexNameRank)
         {
@@ -79,12 +74,9 @@ namespace DecodingNumberApp
             {
                 return new DictionaryOfRussianNumbers().thousandNamber[singleNumber];
             }
-            else
-            {
-                return new DictionaryOfRussianNumbers().numberDictionary[singleNumber];
-            }
+            return new DictionaryOfRussianNumbers().numberDictionary[singleNumber];
         }
-        private string ConvertFrom20(int singleNumber, int indexNameRank)
+        private string ConvertFrom20To999(int singleNumber, int indexNameRank)
         {
             int remainderOfDivision = singleNumber % GetRank(singleNumber);
             int numberWithoutRemainder = singleNumber - remainderOfDivision;
@@ -93,10 +85,7 @@ namespace DecodingNumberApp
                 return new DictionaryOfRussianNumbers().numberDictionary[numberWithoutRemainder]
                     + " " + ConvertSingleNumbers(remainderOfDivision, indexNameRank);
             }
-            else
-            {
-                return new DictionaryOfRussianNumbers().numberDictionary[numberWithoutRemainder];
-            }
+            return new DictionaryOfRussianNumbers().numberDictionary[numberWithoutRemainder];
         }
         private int GetRank(int singleNumber)
         {

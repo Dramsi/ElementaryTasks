@@ -14,7 +14,7 @@ namespace LuckyTicketsApp
                 {
                     return null;
                 }
-                if (luckyTickets.MinTiketValue > luckyTickets.MaxTiketValue)
+                if (luckyTickets.MinTiсketValue > luckyTickets.MaxTiсketValue)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("The minimum value cannot be greater than the maximum!");
@@ -68,7 +68,7 @@ namespace LuckyTicketsApp
         }
         private LuckyTickets verificationEmptyInput(LuckyTickets luckyTickets)                                      
         {
-            if (luckyTickets.MinTiketValue == -1 || luckyTickets.MaxTiketValue == -1)
+            if (luckyTickets.MinTiсketValue == -1 || luckyTickets.MaxTiсketValue == -1)
             {
                 return null;
             }
@@ -78,7 +78,7 @@ namespace LuckyTicketsApp
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine($"Number of lucky tickets counted in an easy way: {numberOfLuckyTicketsEasyWay}" +
-                $"\nNumber of lucky tickets counted in a difficul way: {numberOfLuckyTicketsDifficultWay}");
+                $"\nNumber of lucky tickets counted in a difficult way: {numberOfLuckyTicketsDifficultWay}");
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             if (numberOfLuckyTicketsEasyWay > numberOfLuckyTicketsDifficultWay)
             {

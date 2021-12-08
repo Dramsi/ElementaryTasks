@@ -21,13 +21,8 @@ namespace NumberSequenceApp.Tests
         [TestCase(5, 439.5, new int[] { 21, 22, 23, 24, 25 })]
         public void CalculationSequence_Test_Positive(int lengthArray, double squareNumber, int[] expected)
         {
-            // Arrange
             NumberSequence numberSequence = new NumberSequence(lengthArray, squareNumber);
-
-            // Act
             int[] actual = calculation.CalculationSequence(numberSequence);
-
-            // Assert
             Assert.AreEqual(expected, actual);
         }
 
@@ -36,12 +31,7 @@ namespace NumberSequenceApp.Tests
         [TestCase(null, null)]
         public void CalculationSequence_Test_Negative(NumberSequence numberSequence, int[] expected)
         {
-            // Arrange
-
-            // Act
             int[] actual = calculation.CalculationSequence(numberSequence);
-
-            // Assert
             Assert.AreEqual(expected, actual);
         }
 
@@ -52,13 +42,7 @@ namespace NumberSequenceApp.Tests
         [TestCase(new int[] { 21, 22, 23, 24, 25 }, "Results: 21 22 23 24 25")]
         public void TranslationToString_Test_Positive(int[] numbers, string expected)
         {
-            // Arrange
-
-
-            // Act
             string actual = calculation.TranslationToString(numbers);
-
-            // Assert
             Assert.AreEqual(expected, actual);
         }
 
@@ -67,13 +51,7 @@ namespace NumberSequenceApp.Tests
         [TestCase(null, null)]
         public void TranslationToString_Test_Negative(int[] numbers, string expected)
         {
-            // Arrange
-
-
-            // Act
             string actual = calculation.TranslationToString(numbers);
-
-            // Assert
             Assert.AreEqual(expected, actual);
         }
 

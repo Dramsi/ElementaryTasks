@@ -5,14 +5,14 @@
         public string format = "000000";
         private int minTiketValue;       
         private int maxTiketValue;
-        public int MinTiketValue
+        public int MinTiсketValue
         {
             get
             {
                 return minTiketValue;
             }
         }
-        public int MaxTiketValue
+        public int MaxTiсketValue
         {
             get
             {

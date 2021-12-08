@@ -10,8 +10,8 @@ namespace MainProject
             Console.WriteLine(@"    Select the program and enter the corresponding number:
 
 1 - NumberSequenceApp
-2 - DecodingNumberApp
-3 - LuckyTicketsApp
+2 - LuckyTicketsApp
+3 - DecodingNumberApp
 ");
             Console.ForegroundColor = ConsoleColor.White;
         }

@@ -7,7 +7,7 @@ namespace LuckyTicketsApp
         public int CountLuckyTicketsTheEasyWay(LuckyTickets luckyTickets)
         {
             int numberLuckyTickets = 0;
-            for (int ticket = luckyTickets.MinTiketValue; ticket <= luckyTickets.MaxTiketValue; ticket++)
+            for (int ticket = luckyTickets.MinTiсketValue; ticket <= luckyTickets.MaxTiсketValue; ticket++)
             {
                 string ticketInFormat = ticket.ToString(luckyTickets.format);
                 if ((ticketInFormat[0] + ticketInFormat[1] + ticketInFormat[2]) == (ticketInFormat[3] + ticketInFormat[4] + ticketInFormat[5]))
@@ -20,7 +20,7 @@ namespace LuckyTicketsApp
         public int CountLuckyTicketsTheDifficulWay(LuckyTickets luckyTickets)
         {
             int numberLuckyTickets = 0;
-            for (int ticket = luckyTickets.MinTiketValue; ticket <= luckyTickets.MaxTiketValue; ticket++)
+            for (int ticket = luckyTickets.MinTiсketValue; ticket <= luckyTickets.MaxTiсketValue; ticket++)
             {
                 string ticketInFormat = ticket.ToString(luckyTickets.format);
                 int evenDigits = 0, oddDigits = 0;

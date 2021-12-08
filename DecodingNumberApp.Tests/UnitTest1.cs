@@ -1,6 +1,4 @@
 using NUnit.Framework;
-using DecodingNumberApp;
-using System;
 
 namespace DecodingNumberApp.Tests
 {
@@ -32,13 +30,7 @@ namespace DecodingNumberApp.Tests
         [TestCase(ulong.MaxValue, "восемнадцать триллионов четыреста сорок шесть биллиардов семьсот сорок четыре биллиона семьдес€т три миллиарда семьсот дев€ть миллионов п€тьсот п€тьдес€т одна тыс€ча шестьсот п€тнадцать")]
         public void ConvertAllNumbers_Test_Positive(ulong number, string expected)
         {
-            // Arrange
-            
-
-            // Act
             string actual = calculation.ConvertAllNumbers(number);
-
-            // Assert
             Assert.AreEqual(expected, actual);
         }
 

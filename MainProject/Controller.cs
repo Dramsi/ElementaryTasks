@@ -11,8 +11,9 @@ namespace MainProject
         Dictionary<int, Action<string[]>> ProgramNumber = new Dictionary<int, Action<string[]>>
         {
             { 1, new Action<string[]>(NumberSequenceApp.Program.Main) },
-            { 2, new Action<string[]>(DecodingNumberApp.Program.Main) },
-            { 3, new Action<string[]>(LuckyTicketsApp.Program.Main) }
+            { 2, new Action<string[]>(LuckyTicketsApp.Program.Main) },
+            { 3, new Action<string[]>(DecodingNumberApp.Program.Main) }
+            
         };
         public void Run(string[] args)
         {

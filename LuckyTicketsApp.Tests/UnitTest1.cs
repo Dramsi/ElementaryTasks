@@ -19,13 +19,8 @@ namespace LuckyTicketsApp.Tests
         [TestCase(100, 100000, 4839)]
         public void CountLuckyTicketsTheEasyWay_Test_Positive(int minTiketValue, int maxTiketValue, int expected)
         {
-            // Arrange
             LuckyTickets luckyTickets = new LuckyTickets(minTiketValue, maxTiketValue);
-
-            // Act
             int actual = calculation.CountLuckyTicketsTheEasyWay(luckyTickets);
-
-            // Assert
             Assert.AreEqual(expected, actual);
         }
 
@@ -36,13 +31,8 @@ namespace LuckyTicketsApp.Tests
         [TestCase(100, 100000, 3725)]
         public void CountLuckyTicketsTheDifficulWay_Test_Positive(int minTiketValue, int maxTiketValue, int expected)
         {
-            // Arrange
             LuckyTickets luckyTickets = new LuckyTickets(minTiketValue, maxTiketValue);
-
-            // Act
             int actual = calculation.CountLuckyTicketsTheDifficulWay(luckyTickets);
-
-            // Assert
             Assert.AreEqual(expected, actual);
         }
 

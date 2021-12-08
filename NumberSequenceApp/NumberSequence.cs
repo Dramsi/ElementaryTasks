@@ -2,8 +2,8 @@
 {
     public class NumberSequence
     {
-        private int lengthArray ;       // n
-        private double squareNumber;    // m
+        private int lengthArray;
+        private double squareNumber;
         public int LengthArray
         {
             get

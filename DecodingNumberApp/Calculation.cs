@@ -43,22 +43,7 @@ namespace DecodingNumberApp
         private string[] ConvertNumberToFormat(ulong number)
         {
             string numberInFormat = number.ToString(new FormatDictionary().format);
-            numberInFormat = RemoveZeroValues(numberInFormat);
             return numberInFormat.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-        }
-        private string RemoveZeroValues(string numberInFormat)
-        {
-            char[] naturalUnits = new FormatDictionary().naturalUnits;
-            int indexOfChar = numberInFormat.Length - 1;
-            for (int i = 0; i < naturalUnits.Length; i++)
-            {
-                if (numberInFormat.IndexOf(naturalUnits[i]) != -1 && numberInFormat.IndexOf(naturalUnits[i]) < indexOfChar)
-                {
-                    indexOfChar = numberInFormat.IndexOf(naturalUnits[i]);
-                }
-            }
-            numberInFormat = numberInFormat.Remove(0, indexOfChar);
-            return numberInFormat;
         }
         private string ConvertSingleNumbers(int singleNumber, int indexNameRank)
         {
